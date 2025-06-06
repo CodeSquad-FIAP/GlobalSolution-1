@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Configurações - Civitas AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="js/config.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Configurações</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="simulacao.html">Simulação</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+        <li><a href="config.html" class="active" title="Configurações"><i class="fas fa-cog"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="section">
+    <h2 id="form-title">Parâmetros da Simulação</h2>
+    <form id="form-config" class="config-form">
+      <div class="form-group">
+        <label for="tempo">Tempo de evacuação por pessoa (s):</label>
+        <input type="number" id="tempo" min="1" required />
+      </div>
+      <div class="form-group">
+        <label for="limiteAbrigo">Limite de ocupação dos abrigos (%):</label>
+        <input type="number" id="limiteAbrigo" min="50" max="100" required />
+      </div>
+      <div class="form-group">
+        <label for="taxa">Taxa média de deslocamento (m/min):</label>
+        <input type="number" id="taxa" min="1" required />
+      </div>
+      <button type="submit" class="btn">Salvar Configurações</button>
+    </form>
+    <p id="mensagem-config" class="mensagem" style="display: none;"></p>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 Civitas AI - Projeto Global Solution FIAP</p>
+  </footer>
+</body>
+</html>

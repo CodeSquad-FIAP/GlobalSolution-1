@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório - Civitas AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="js/relatorio.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Relatório</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="simulacao.html">Simulação</a></li>
+        <li><a href="relatorio.html" class="active">Relatório</a></li>
+        <li><a href="config.html" title="Configurações"><i class="fas fa-cog"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="section">
+    <h2>Importar relatório da simulação</h2>
+    <p class="highlight" style="margin-bottom: 1rem;">
+      Carregue um arquivo <strong>.json</strong> exportado da simulação para visualizar os dados.
+    </p>
+    <div class="upload-container">
+      <label for="fileInput" class="upload-label">
+        <i class="fas fa-upload"></i> Escolher arquivo...
+        <input type="file" id="fileInput" accept="application/json" hidden />
+      </label>
+      <span id="nomeArquivo" class="upload-nome">Nenhum arquivo selecionado</span>
+    </div>
+    <section id="relatorio-container" class="section"></section>
+    <button class="btn" id="exportPDFBtn" style="margin-top: 1rem;">
+      Exportar relatório como PDF
+    </button>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 Civitas AI — Projeto Global Solution FIAP</p>
+  </footer>
+</body>
+</html>

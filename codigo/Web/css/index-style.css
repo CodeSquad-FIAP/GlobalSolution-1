@@ -1,0 +1,258 @@
+:root {
+  --primary: #0055aa;
+  --accent: #3399ff;
+  --secondary: #f9f9f9;
+  --dark: #111;
+  --light: #fff;
+  --radius: 8px;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+  background: var(--secondary);
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: var(--dark);
+  color: var(--light);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  background: var(--accent);
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  background: url("../assets/cidade.jpg") center/cover no-repeat;
+  color: var(--light);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  backdrop-filter: blur(2px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #003f7a;
+}
+
+section:not(.hero) {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+section ul {
+  /* list-style: none; */
+  margin-block: 2rem;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+section ul li {
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+section#impacto ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#equipe {
+  margin-top: 3rem;
+  padding: 0;
+}
+
+.team-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.team-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.team-list li img {
+  height: auto;
+  width: 8rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+section.feature {
+  padding: 3rem 10rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: start;
+  background: #fff;
+  margin-top: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+section.feature h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+section.feature p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+section.feature ul {
+  /* list-style: none; */
+  padding: 0;
+  margin-top: 1rem;
+}
+
+section.feature ul li {
+  margin: 0.3rem 0;
+  font-size: 1.05rem;
+}
+
+section.feature .btn-link {
+  margin-top: 1rem;
+  display: inline-block;
+}

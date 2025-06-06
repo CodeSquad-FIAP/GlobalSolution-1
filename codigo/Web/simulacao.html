@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulação - Civitas AI</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+  <script defer src="js/simulacao.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Simulação</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="simulacao.html" class="active">Simulação</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+        <li><a href="config.html" title="Configurações">
+          <i class="fas fa-cog"></i>
+        </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h2>Mapa da Cidade</h2>
+    <div
+      id="resumo-config"
+      class="mensagem"
+      style="margin-bottom: 1rem;"
+    ></div>
+
+    <div class="grid-container">
+      <button id="evacuarBtn" class="btn">Iniciar evacuação</button>
+      <button
+        id="exportRelatorioBtn"
+        class="btn"
+      >
+        Exportar Relatório
+      </button>
+    </div>
+
+    <div id="map" style="margin-top:1rem; height:500px;"></div>
+
+    <section id="config-ativa" class="card destaque" style="margin-top:1rem;">
+      <h4><i class="fas fa-sliders-h"></i> Configuração Atual</h4>
+      <div id="config-ativa-info" style="display:flex; gap:2rem; flex-wrap:wrap;">
+        <p>
+          <i class="fas fa-clock"></i>
+          Tempo: <span id="tempoAtivo">-</span>s
+        </p>
+        <p>
+          <i class="fas fa-warehouse"></i>
+          Limite: <span id="limiteAtivo">-</span>%
+        </p>
+        <p>
+          <i class="fas fa-walking"></i>
+          Velocidade: <span id="taxaAtiva">-</span>m/min
+        </p>
+      </div>
+      <a
+        href="config.html"
+        class="btn"
+        style="margin-top:1rem;"
+      >
+        <i class="fas fa-cog"></i> Alterar configuração
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Civitas AI — Projeto Global Solution FIAP</p>
+  </footer>
+</body>
+</html>
