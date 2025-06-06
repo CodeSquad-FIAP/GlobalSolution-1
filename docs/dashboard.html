@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Civitas AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="js/dashboard.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Civitas AI</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="simulacao.html">Simulação</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+        <li><a href="config.html" title="Configurações"><i class="fas fa-cog"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="section">
+    <h2>Status Atual</h2>
+    <div id="cards-container" class="card-grid"></div>
+    <div style="text-align: left; margin-top: 1rem;">
+      <button class="btn" id="exportBtn">Exportar dados</button>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2025 Civitas AI — Projeto Global Solution FIAP</p>
+  </footer>
+</body>
+</html>
