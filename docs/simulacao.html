@@ -4,21 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simulação - Civitas AI</title>
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/simulacao-style.css">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="js/mobile-nav.js"></script>
   <script defer src="js/simulacao.js"></script>
 </head>
 <body>
   <header class="header">
     <h1>Simulação</h1>
+    <div class="hamburger">
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html" class="active">Início</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="simulacao.html">Simulação</a>
+          <a href="relatorio.html">Relatório</a>
+          <a href="config.html" title="Configurações">Configurações</a>
+        </div>
+      </div>
+      <span id="myNav-btn" onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Início</a></li>
@@ -37,15 +46,11 @@
     <div
       id="resumo-config"
       class="mensagem"
-      style="margin-bottom: 1rem;"
-    ></div>
+      style="margin-bottom: 1rem;"></div>
 
     <div class="grid-container">
       <button id="evacuarBtn" class="btn">Iniciar evacuação</button>
-      <button
-        id="exportRelatorioBtn"
-        class="btn"
-      >
+      <button id="exportRelatorioBtn" class="btn">
         Exportar Relatório
       </button>
     </div>

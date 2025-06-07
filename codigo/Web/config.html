@@ -5,12 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Configurações - Civitas AI</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/config-style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="js/mobile-nav.js"></script>
   <script defer src="js/config.js"></script>
 </head>
 <body>
   <header class="header">
     <h1>Configurações</h1>
+    <div class="hamburger">
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html" class="active">Início</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="simulacao.html">Simulação</a>
+          <a href="relatorio.html">Relatório</a>
+          <a href="config.html" title="Configurações">Configurações</a>
+        </div>
+      </div>
+      <span id="myNav-btn" onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Início</a></li>
