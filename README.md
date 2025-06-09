@@ -64,7 +64,7 @@ A solução permite **gerenciar rotas, abrigos e cidadãos** de forma inteligent
  
 ## 🎬 Vídeo Pitch
  
-📽️ Link: [`Clique aqui para assistir`]("inserirlinkaqui!)  
+📽️ Link: [`Clique aqui para assistir`](https://www.youtube.com/watch?v=nrKWgKUzS9M)  
 📌 Demonstra:
 - Funcionalidade do sistema no console
 - Protótipo web e suas páginas
